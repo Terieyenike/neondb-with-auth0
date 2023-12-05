@@ -12,17 +12,13 @@ This app is a Node.js backend API where [node-postgres](https://node-postgres.co
 
 ![deleting with an id in postman](https://github.com/Terieyenike/SQL-notes/assets/25850598/85a5cb35-ebfd-48e0-9d9f-8d3794174fdc)
 
-### Deployed app
-
-Student data
-
 ### Setup
 
 **Clone the repo and install dependencies**
 
 ```
-$ git clone
-$ cd
+$ git clone https://github.com/Terieyenike/neondb-with-auth0.git
+$ cd neondb-with-auth0
 $ npm install
 ```
 
