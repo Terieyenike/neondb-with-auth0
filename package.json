@@ -1,7 +1,7 @@
 {
   "name": "neon-nodejs",
   "version": "1.0.0",
-  "description": "Secure your backend services with Auth0 and Node.js using the NeonDB API as an example",
+  "description": "Secure your backend APIs with Auth0 and Node.js using the NeonDB API as an example",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
