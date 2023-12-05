@@ -1,17 +1,18 @@
 {
   "name": "neon-nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Secure your backend services with Auth0 and Node.js using the NeonDB API as an example",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["neondb", "nodejs", "express", "postgresql", "auth0", "jwt", "restapi", "api", "backend"],
+  "author": "Teri Eyenike",
   "license": "ISC",
   "dependencies": {
     "dotenv": "16.3.1",
+    "express": "4.18.2",
     "pg": "8.11.3"
   },
   "devDependencies": {
