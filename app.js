@@ -1,10 +1,22 @@
+const { auth } = require('express-openid-connect');
+const { requiresAuth } = require('express-openid-connect');
 const { Pool } = require('pg');
 const express = require('express');
 const app = express();
 
-app.use(express.json());
-
 require('dotenv').config();
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
+};
+
+app.use(express.json());
+app.use(auth(config));
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -13,7 +25,7 @@ const pool = new Pool({
   },
 });
 
-app.post('/students', async (req, res) => {
+app.post('/', async (req, res) => {
   const client = await pool.connect();
   const { first_name, last_name, email } = req.body;
   try {
@@ -27,7 +39,13 @@ app.post('/students', async (req, res) => {
   }
 })
 
-app.get('/students', async (req, res) => {
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
+
+app.get('/', async (req, res) => {
+  console.log(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+  const isAuthenticated = req.oidc.isAuthenticated();
   const client = await pool.connect();
   try {
     const response = await client.query('SELECT * FROM student');
@@ -40,7 +58,7 @@ app.get('/students', async (req, res) => {
   }
 });
 
-app.get('/students/:id', async (req, res) => {
+app.get('/:id', async (req, res) => {
   const client = await pool.connect();
   const {id} = req.params;
   try {
@@ -54,7 +72,7 @@ app.get('/students/:id', async (req, res) => {
   }
 })
 
-app.put('/students/:id', async (req, res) => {
+app.put('/:id', async (req, res) => {
   const client = await pool.connect();
   const { id } = req.params;
   const {first_name, last_name, email} = req.body;
@@ -69,7 +87,7 @@ app.put('/students/:id', async (req, res) => {
   }
 })
 
-app.delete('/students/:id', async (req, res) => {
+app.delete('/:id', async (req, res) => {
   const client = await pool.connect();
   const { id } = req.params;
   try {
