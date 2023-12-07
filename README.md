@@ -10,6 +10,9 @@ This app is a Node.js backend API where [node-postgres](https://node-postgres.co
 
 [![neon app with auth0](https://cdn.loom.com/sessions/thumbnails/99535d8cd3214a1ba284d38921322e18-with-play.gif)](https://www.loom.com/share/99535d8cd3214a1ba284d38921322e18)
 
+![student info from neon db](https://github.com/Terieyenike/neondb-with-auth0/assets/25850598/dc296927-4d8c-47d5-84e1-a220b4c696f0)
+
+
 ### Setup
 
 **Clone the repo and install dependencies**
