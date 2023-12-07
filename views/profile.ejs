@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+  <main>
+    <%- include('partials/nav') -%>
+      <div class="info">
+        <h2>
+          <%= title %>
+        </h2>
+        <% if (user) { %>
+          <div class="profileDetails">
+            <p>
+              Hello, <%= user.name %>
+            </p>
+
+
+            <pre><code><%= JSON.stringify(user,null,2) %></code></pre>
+          </div>
+          <% } %>
+      </div>
+  </main>
