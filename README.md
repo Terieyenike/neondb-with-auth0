@@ -2,15 +2,13 @@
 
 Neon is a cloud-native serverless Postgres database which enables you spin up a database instance quickly and connect with it has features like autoscaling, branching, and bottomless storage with its architecture that support separate compute and storage.
 
-Get started with [Neon](https://console.neon.tech/sign_in).
+Get started with [Neon](https://console.neon.tech/sign_in) and [Auth0](https://auth0.com/signup?place=header&type=button&text=sign%20up).
 
 This app is a Node.js backend API where [node-postgres](https://node-postgres.com/) is used to query the database in Neon and returning the data as JSON.
 
 ### Demo
 
-![student objects](https://github.com/Terieyenike/SQL-notes/assets/25850598/bed20a09-d6a4-40a3-9829-f13d7386ad1f)
-
-![deleting with an id in postman](https://github.com/Terieyenike/SQL-notes/assets/25850598/85a5cb35-ebfd-48e0-9d9f-8d3794174fdc)
+[![neon app with auth0](https://cdn.loom.com/sessions/thumbnails/99535d8cd3214a1ba284d38921322e18-with-play.gif)](https://www.loom.com/share/99535d8cd3214a1ba284d38921322e18)
 
 ### Setup
 
@@ -36,5 +34,10 @@ $ npm run dev
 
 - Express
 - node-postgres
-- Postman
+- Embedded JavaScript (EJS)
 - Neon
+- Auth0
+
+### Author
+
+- [Teri](https://x.com/terieyenike)
