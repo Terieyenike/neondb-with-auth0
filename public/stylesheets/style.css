@@ -63,11 +63,14 @@ img {
    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   gap: 2rem;
   padding: 2em 0;
+
 }
 
 .student-info ul {
   background: #FBEED3;
   padding: 1em 2em;
+  overflow: hidden;
+  user-select: none;
 }
 
 .student-info ul li {

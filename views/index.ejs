@@ -1,12 +1,13 @@
 <%- include('partials/header'); -%>
   <main>
     <%- include('partials/nav'); -%>
-      <div class="info">
+      <div class=" info">
         <% if (user) { %>
           <h3>
-            Welcome, <%= user.given_name %>
+            Welcome, <%= user.name %>
           </h3>
-          <div class="student-info">
+
+          <div class=" student-info">
             <% students.forEach(function(student){ %>
               <ul>
                 <li>
