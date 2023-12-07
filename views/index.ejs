@@ -1,0 +1,31 @@
+<%- include('partials/header'); -%>
+  <main>
+    <%- include('partials/nav'); -%>
+      <div class=" info">
+        <% if (user) { %>
+          <h3>
+            Welcome, <%= user.name %>
+          </h3>
+
+          <div class=" student-info">
+            <% students.forEach(function(student){ %>
+              <ul>
+                <li>
+                  <%= student.first_name %>
+                    <%= student.last_name %>
+                </li>
+                <p>
+                  <%= student.email %>
+                </p>
+              </ul>
+              <% }) %>
+          </div>
+          <% } else { %>
+            <h1>
+              <%= title %>
+            </h1>
+            <p>You need to login to view the page details</p>
+            <% } %>
+      </div>
+  </main>
+  <%- include('partials/footer'); -%>
