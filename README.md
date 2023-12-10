@@ -12,6 +12,9 @@ This app is a Node.js backend API where [node-postgres](https://node-postgres.co
 
 ![student info from neon db](https://github.com/Terieyenike/neondb-with-auth0/assets/25850598/dc296927-4d8c-47d5-84e1-a220b4c696f0)
 
+## Deployed app
+
+Test this web app: https://neondb.onrender.com/
 
 ### Setup
 
